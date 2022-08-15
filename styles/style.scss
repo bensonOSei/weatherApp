@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+@import 'animations';
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #efefef;
+    display: grid;
+    place-items: center;
+}
+
+h1{
+    font-size: 1.7rem;
+}
+
+h2{
+   font-size:  1.25rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+
+    .card {
+        width: 90%;
+        margin: 0 auto;
+        padding: 1.25rem;
+        background-color: #fff;
+        border-radius: 0.875rem;
+        margin-bottom: 1.25rem;
+        box-shadow: 0px 0px 26px rgba(0, 0, 0, 0.1);
+
+        label{
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 0.25rem;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+            outline: none;
+
+            &.invalid {
+                border: 3px solid #f00;
+            }            
+        }
+
+        button{
+            position: relative;
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 0.25rem;
+            margin-bottom: 0.5rem;
+            font: inherit;
+            font-size: 1.25rem;
+            outline: none;
+            cursor: pointer;
+            background-color: #00a8ff;
+            color: #fff;
+            transition: all 0.2s ease-in-out;
+
+            
+            &:hover{
+                background-color: #0671a7;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.input-field{
+    position: relative;
+    #error-msg-cont{
+        position: absolute;
+        display: none;
+        width: 100%;
+        height: 70%;
+        background-color: #252525b7;
+        top: -59%;
+        border-radius: 00.5rem;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+        animation: scale-in-ver-bottom 0.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+
+        p{
+            color: #fff;
+            font-size: 1.25rem;
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        &::after{
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 0.5rem solid transparent;
+            border-right: 0.5rem solid transparent;
+            border-top: 1rem solid #252525b7;
+            bottom: -34%;
+            left: 50%;
+            transform: translateY(-50%);
+            //opacity: 0;
+            //transition: all 0.2s ease-in-out;
+        }
+    
+    
+
+    }
+}
+
+.content-head{
+    *{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.weather-icon{
+    width: 100%;
+    height: 150px;
+    margin-bottom: 0.5rem;
+    display: grid;
+    place-items: center;
+
+    .icon-container{
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background-color: #f9f9f9;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        img{
+            width:80%;
+            height: 80%;
+            object-fit: contain;
+
+        }
+
+    }
+}
+
+.container .main-content{
+    position: relative;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: height .2s ease-in-out;
+
+    .load-error-container{
+        position: absolute;
+        //display: none;
+        height: 100%;
+        width: 100%;
+        background-color: #fff;
+        display: none;
+        place-items: center;
+
+        p{
+            font-size: 1.25rem;
+            font-weight: 900;
+            text-align: center;
+            color: #f00;
+        }
+    }
+
+    &.open {
+        height: 400px;
+        padding: 1.25rem;
+    }
+}
+.content-foot{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #e2ecf1;
+    border-radius: 1rem;
+    span{
+        text-align: center;
+        font-weight: 600;
+    }
+}
+.footer-note{
+    font-size: 0.75rem;
+    color: rgb(188, 188, 188);
+    text-align: center;
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+}
+#weather-condition{
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+#icon {
+    display: none;
+}

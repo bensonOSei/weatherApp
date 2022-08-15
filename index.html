@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <script defer src="js/app.js"></script>
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card content-form">
+            <form action="#" id="weather-form">
+                <div class="input-field">
+                    <div id="error-msg-cont">
+                        <p id="error-msg">Message</p>
+                    </div>
+                    <label for="city">City</label>
+                    <input list="cities" name="city-input" id="city-input" placeholder="Enter city name here">
+                    <datalist id="cities">
+                    </datalist>
+                </div>
+                <button title="Search" id="search-city">Search</button>
+            </form>
+        </div>
+
+        <div class="card main-content">
+            <div class="load-error-container">
+                <p id="load-error">Error</p>
+            </div>
+            <div class="content-head">
+                <h1 id="city-display">City Name</h1>
+                <h2 id="region-display">Region Name</h2>
+            </div>
+            <div class="content-main">
+                <div class="weather-icon">
+                    <div class="icon-container">
+                        <img src="" alt="" id="icon" >
+                    </div>
+                </div>
+                <p id="weather-condition">Condition</p>
+                
+                <div class="content-foot">
+                    <p><span id="temperature" ></span> <span id="degree">&#8451;</span></p>
+                    <p>Last Updated: <span id="date" ></span> </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-note">
+            <p>Created by <i><strong>Benson Osei-Mensah</strong></i></p>
+            <p>Powered by <a href="https://www.weatherapi.com">Weather API</a></p>
+        </div>
+    </div>
+    
+</body>
+</html>
